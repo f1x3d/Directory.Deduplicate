@@ -1,0 +1,11 @@
+<Project>
+  <PropertyGroup>
+    <EnablePackageValidation Condition="'$(Version)' != '$(PackageValidationBaselineVersion)' And '$(IsPackable)' != 'false'">true</EnablePackageValidation>
+    <PublishDir Condition="'$(AOT)' == 'true'">bin/native/$(AssemblyName)-$(Version)-$(RuntimeIdentifier)</PublishDir>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(IsPackable)' != 'false'">
+    <None Include="$(MSBuildThisFileDirectory)\LICENSE" Pack="true" PackagePath="" Visible="false" />
+    <None Include="$(MSBuildThisFileDirectory)\README.md" Pack="true" PackagePath="" Visible="true" />
+  </ItemGroup>
+</Project>
