@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_misc", "_misc.csproj", "{B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Directory.Deduplicate.Cli", "Directory.Deduplicate.Cli\Directory.Deduplicate.Cli.csproj", "{148ACDBD-E174-4F82-86B4-8DB4CBBA7F4D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Directory.Deduplicate.Cli.Tests", "Directory.Deduplicate.Cli.Tests\Directory.Deduplicate.Cli.Tests.csproj", "{6899B2E1-580F-42CE-B598-B5982FCCF8A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{148ACDBD-E174-4F82-86B4-8DB4CBBA7F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{148ACDBD-E174-4F82-86B4-8DB4CBBA7F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{148ACDBD-E174-4F82-86B4-8DB4CBBA7F4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6899B2E1-580F-42CE-B598-B5982FCCF8A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6899B2E1-580F-42CE-B598-B5982FCCF8A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6899B2E1-580F-42CE-B598-B5982FCCF8A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6899B2E1-580F-42CE-B598-B5982FCCF8A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
