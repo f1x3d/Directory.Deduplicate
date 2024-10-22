@@ -64,7 +64,7 @@ jobs:
         path: ${{ github.workspace }}
 
     - name: Build binary
-      run: dotnet publish **/Directory.Deduplicate.Cli.csproj -c Release -f net8.0 -p:AOT=true
+      run: dotnet publish ./Directory.Deduplicate.Cli/Directory.Deduplicate.Cli.csproj -c Release -f net8.0 -p:AOT=true
 
     - id: os-string
       name: Get OS string
