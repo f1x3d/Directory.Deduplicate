@@ -100,8 +100,8 @@ public static class Deduplicator
 
             do
             {
-                lastBytesRead = await ReadFileBytes(buffer1, fileStream1, offset);
-                await ReadFileBytes(buffer2, fileStream2, offset);
+                lastBytesRead = await ReadFileBytes(buffer1, fileStream1);
+                await ReadFileBytes(buffer2, fileStream2);
 
                 offset += lastBytesRead;
 
@@ -124,7 +124,7 @@ public static class Deduplicator
         }
     }
 
-    private static async Task<int> ReadFileBytes(byte[] buffer, FileStream fileStream, int offset)
+    private static async Task<int> ReadFileBytes(byte[] buffer, FileStream fileStream)
     {
         int totalBytesRead = 0;
         int newBytesRead;
@@ -132,7 +132,7 @@ public static class Deduplicator
         do
         {
             newBytesRead = await fileStream.ReadAsync(
-                buffer.AsMemory(offset + totalBytesRead, buffer.Length - totalBytesRead));
+                buffer.AsMemory(totalBytesRead, buffer.Length - totalBytesRead));
 
             totalBytesRead += newBytesRead;
         }
