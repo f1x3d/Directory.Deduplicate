@@ -88,10 +88,10 @@ public sealed class MainTests : IDisposable
     }
 
     [Fact]
-    public async Task Main_WithTwoDuplicateFilesWithoutForce_RemovesNothing()
+    public async Task Main_WithTwoLargeDuplicateFilesWithoutForce_RemovesNothing()
     {
-        var fileA = await CreateFileWithRandomContents(seed: 1, size: 1024 * 1024);
-        var fileB = await CreateFileWithRandomContents(seed: 1, size: 1024 * 1024);
+        var fileA = await CreateFileWithRandomContents(seed: 1, size: 2 * 1024 * 1024);
+        var fileB = await CreateFileWithRandomContents(seed: 1, size: 2 * 1024 * 1024);
 
         var exitCode = await Program.Main(
         [
