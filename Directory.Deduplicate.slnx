@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Directory.Deduplicate.Cli.Tests/Directory.Deduplicate.Cli.Tests.csproj" />
+  <Project Path="Directory.Deduplicate.Cli/Directory.Deduplicate.Cli.csproj" />
+  <Project Path="_misc.csproj" />
+</Solution>

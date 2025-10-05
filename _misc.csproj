@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <None Include="**/*" />
-    <None Remove=".git/**;.vs/**;obj/**;*.sln;_misc.csproj;Directory.Deduplicate*/**" />
+    <None Remove=".git/**;.vs/**;obj/**;*.slnx;_misc.csproj;Directory.Deduplicate*/**" />
   </ItemGroup>
 
 </Project>
