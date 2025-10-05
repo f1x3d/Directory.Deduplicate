@@ -15,6 +15,7 @@ env:
   DOTNET_VERSION: |
     6.x
     8.x
+    9.0.3xx
   DOTNET_QUALITY: ga
 
 jobs:
@@ -31,10 +32,10 @@ jobs:
         dotnet-quality: ${{ env.DOTNET_QUALITY }}
 
     - name: Restore dependencies
-      run: dotnet restore *.sln
+      run: dotnet restore *.slnx
 
     - name: Build solution
-      run: dotnet build *.sln --no-restore -c Release
+      run: dotnet build *.slnx --no-restore -c Release
 
     - name: Publish build artifacts
       uses: actions/upload-artifact@v4
@@ -98,7 +99,7 @@ jobs:
         path: ${{ github.workspace }}
 
     - name: Pack
-      run: dotnet pack *.sln -c Release
+      run: dotnet pack *.slnx -c Release
 
     - name: Publish pack artifacts
       uses: actions/upload-artifact@v4
@@ -125,7 +126,7 @@ jobs:
         path: ${{ github.workspace }}
 
     - name: Run tests
-      run: dotnet test *.sln --no-build -c Release
+      run: dotnet test *.slnx --no-build -c Release
 
   publish:
     name: Publish
